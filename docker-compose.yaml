@@ -1,33 +1,25 @@
 version: '3.1'
 
 services:
-  site:
-    build: .
-    container_name: apiska
-    ports: 
-      - "8888:8888"
-
-  pg_db:
-    image: postgres:13.4
+  db:
+    image: postgres:latest
+    container_name: pg
     restart: always
+    ports:
+      - "5432:5432"
     environment:
-      - POSTGRES_HOST=localhost
-      - POSTGRES_USER=root
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=postgres
     volumes:
-      - db_pg_dart:/var/lib/postgresql/data/
+      - db_vol:/var/lib/postgresql/data/
+    
+  api:
+    container_name: api
+    build: .
     ports:
-      - "5432:5432"
-    container_name: pg_db
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - "8000:8080"
-    container_name: adminer
-
+      - 8888:8888
+    
 
 volumes:
-  db_pg_dart:
+  db_vol:
