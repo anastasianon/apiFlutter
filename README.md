@@ -8,94 +8,94 @@
 
 Код регистрация
 
-<img 0.jpg/>
+<img src="/img/0.jpg" alt="image">
 
 Пример работы:
 
-![](1.jpg)
+<img src="/img/1.jpg" alt="image">
 
 Код авторизация
 
-![](2.jpg)
+<img src="/img/2.jpg" alt="image">
 
 Пример работы:
 
-![](3.jpg)
+<img src="/img/3.jpg" alt="image">
 
 Код RefreshToken
 
-![](4.jpg)
+<img src="/img/4.jpg" alt="image">
 
 Пример работы:
 
-![](5.jpg)
+<img src="/img/5.jpg" alt="image">
 
 Код вывода данных пользователя
 
-![](6.jpg)
+<img src="/img/6.jpg" alt="image">
 
 Пример работы:
 
-![](7.jpg)
+<img src="/img/7.jpg" alt="image">
 
 Код редактирования данных пользователя
 
-![](8.jpg)
+<img src="/img/8.jpg" alt="image">
 
 Пример работы
 
-![](9.jpg)
+<img src="/img/9.jpg" alt="image">
 
 Код изменения пароля
 
-![](10.jpg)
+<img src="/img/10.jpg" alt="image">
 
 Пример работы
 
-![](11.jpg)
+<img src="/img/11.jpg" alt="image">
 
 Код создания отчета
 
-![](12.jpg)
+<img src="/img/12.jpg" alt="image">
 
 Пример работы
 
-![](13.jpg)
+<img src="/img/13.jpg" alt="image">
 
 Код изменения отчета
 
-![](14.jpg)
+<img src="/img/14.jpg" alt="image">
 
 Пример работы
 
-![](15.jpg)
+<img src="/img/15.jpg" alt="image">
 
 Код вывода отчетов
 
-![](16.jpg)
+<img src="/img/16.jpg" alt="image">
 
 Пример работы вывода заметок c пагинацией
 
-![](17.jpg)
+<img src="/img/17.jpg" alt="image">
 
 Пример вывода заметок с фильтром
 
-![](18.jpg)
+<img src="/img/18.jpg" alt="image">
 
 Код для логического удаления отчета
 
-![](19.jpg)
+<img src="/img/19.jpg" alt="image">
 
 Пример работы
 
-![](20.jpg)
+<img src="/img/20.jpg" alt="image">
 
 Код восстановления отчета
 
-![](21.jpg)
+<img src="/img/21.jpg" alt="image">
 
 Пример работы
 
-![](2.jpg)
+<img src="/img/22.jpg" alt="image">
 
 Вывод: в ходе данной практической работы был создан API включающий в себя регистрацию, авторизацию, RefreshToken, вывод и редактирование данных пользователя, изменение пароля пользователя, пагинацию данных, фильтрацию, логическое удаление и восстановление.
