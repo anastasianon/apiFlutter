@@ -12,7 +12,6 @@ class AppNoteController extends ResourceController {
 
   final ManagedContext managedContext;
 
-//получение одного отчета по его номеру
   @Operation.get("number")
   Future<Response> getNote(
       @Bind.header(HttpHeaders.authorizationHeader) String header,
@@ -25,8 +24,6 @@ class AppNoteController extends ResourceController {
         ..where((note) => note.number).equalTo(number)
         ..where((note) => note.user!.id).equalTo(currentUserId)
         ..where((note) => note.status).equalTo("true");
-
-        // fetchOne-
 
       final deletedNote = await deletedNoteQuery.fetchOne();
 
@@ -115,7 +112,6 @@ class AppNoteController extends ResourceController {
         default:
           notesQuery.where((note) => note.status).equalTo("false");
       }
-//пагинация fetchLimit-позволяет установить лимит элементов
       if (limit != null && limit > 0) {
         notesQuery.fetchLimit = limit;
       }

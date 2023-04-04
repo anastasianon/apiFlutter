@@ -115,17 +115,14 @@ class AppAuthContoler extends ResourceController {
   Future<Response> refreshToken(
       @Bind.path('refresh') String refreshToken) async {
     try {
-      // Полчаем id пользователя из jwt token
       final id = AppUtils.getIdFromToken(refreshToken);
 
-      // Получаем данные пользователя по его id
       final user = await managedContext.fetchObjectWithID<User>(id);
 
       if (user!.refreshToken != refreshToken) {
         return Response.unauthorized(body: 'Token не валидный');
       }
 
-      // Обновление token
       _updateTokens(id, managedContext);
 
       return Response.ok(
@@ -150,12 +147,10 @@ class AppAuthContoler extends ResourceController {
     await qUpdateTokens.updateOne();
   }
 
-  // Генерация jwt token
   Map<String, String> _getTokens(int id) {
-    // todo remove when release
     final key = Platform.environment['SECRET_KEY'] ?? 'SECRET_KEY';
     final accessClaimSet = JwtClaim(
-      maxAge: const Duration(hours: 1), // Время жизни token
+      maxAge: const Duration(hours: 1), 
       otherClaims: {'id': id},
     );
     final refreshClaimSet = JwtClaim(
